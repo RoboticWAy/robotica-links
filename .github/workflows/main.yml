@@ -1,0 +1,19 @@
+name: Generate Index Page
+on:
+  push:
+    paths:
+      - 'list.txt'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Generator
+        run: python generate_page.py
+      - name: Deploy to Pages
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add index.html
+          git commit -m "Update links page" || exit 0
+          git push
