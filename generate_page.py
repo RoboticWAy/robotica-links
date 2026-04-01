@@ -9,7 +9,7 @@ schema_data = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "LinearLEAD Automation",
-    "url": "https://tuo-username.github.io/robotica-links/",
+    "url": "https://roboticway.github.io/robotica-links/",
     "knowsAbout": ["Industrial Robotics", "Palletizing Systems", "Automation Engineering"],
     "sameAs": links
 }
